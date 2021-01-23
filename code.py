@@ -85,7 +85,7 @@ while True:
         temp_f = thermistor.temperature * 9 / 5 + 32
         t.add(temp_f)
 
-        screen[-1][0] = text_label(f'{temp_f:<8F}')
+        screen[-1][0] = text_label(f'{temp_f:<8}F')
         _min, _max = t.mm()
         screen[-3], screen[-4] = mini_number_label(_max, 180, 125), mini_number_label(_min, 180, 230)
         screen[-2] = bitmap_plot(t.plot(y_range=plot_y_scale), x_size=samples+1, y_size=plot_y_scale+1)
